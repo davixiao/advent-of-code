@@ -43,30 +43,12 @@ int rank(std::string &s)
         cnt += mp['J'];
     }
 
-    if (cnt == 5)
-    {
-        return 7;
-    }
-    if (cnt == 4)
-    {
-        return 6;
-    }
-    if (cnt == 3 && sz == 2)
-    {
-        return 5;
-    }
-    if (cnt == 3)
-    {
-        return 4;
-    }
-    if (cnt == 2 && sz == 3)
-    {
-        return 3;
-    }
-    if (cnt == 2)
-    {
-        return 2;
-    }
+    if (cnt == 5) return 7;
+    if (cnt == 4) return 6;
+    if (cnt == 3 && sz == 2) return 5;
+    if (cnt == 3) return 4;
+    if (cnt == 2 && sz == 3) return 3;
+    if (cnt == 2) return 2;
     return 1;
 }
 
