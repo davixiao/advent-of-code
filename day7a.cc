@@ -36,26 +36,13 @@ int rank(std::string &s)
         cnt = std::max(cnt, it.second);
     }
 
-    if (cnt == 5) {
-        return 7;
-    }
-    if (cnt == 4) {
-        return 6;
-    }
-    if (cnt == 3 && mp.size() == 2) {
-        return 5;
-    }
-    if (cnt == 3) {
-        return 4;
-    }
-    if (cnt == 2 && mp.size() == 3) {
-        return 3;
-    }
-    if (cnt == 2) {
-        return 2;
-    }
+    if (cnt == 5) return 7;
+    if (cnt == 4) return 6;
+    if (cnt == 3 && mp.size() == 2) return 5;
+    if (cnt == 3) return 4;
+    if (cnt == 2 && mp.size() == 3) return 3;
+    if (cnt == 2) return 2;
     return 1;
-
 }
 
 bool cmpLarger(std::pair<std::string, int> hand1, 
