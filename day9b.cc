@@ -15,6 +15,7 @@ int solve(std::string &s) {
     while (ss >> token) {
         seqs[0].push_back(std::stoi(token));
     }
+    // I used this loop condition since input seemed to be increasing
     while (std::accumulate(std::begin(seqs[seqs.size()-1]), 
         std::end(seqs[seqs.size()-1]), 0) != 0) {
         std::vector<int> tmp;
@@ -26,7 +27,7 @@ int solve(std::string &s) {
     }
 
     // pattern: alternate adding or subtracting front values
-    // idk why maybe since all sequences are increasing
+    // idk why maybe since all sequences are increasing. Might be wrong :O
     int ret = 0;
     for (auto i = 0; i < seqs.size(); ++i) {
         if (i % 2 == 0)
